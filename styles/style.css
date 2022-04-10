@@ -6,7 +6,7 @@ h1 {
     display:flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: calc((32 + 2) * 5px);
+    /* width: calc((32 + 2) * 15px); */
 
 }
 
