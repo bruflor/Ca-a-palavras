@@ -1,17 +1,28 @@
+body {
+    background:rgb(236, 236, 236);
+    justify-content: center;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main{
+    justify-items: center;
+}
+
 h1 {
-    color:red;
+    color: #00999e;
 }
 
 #wordHuntContainer{
     display:flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    /* width: calc((32 + 2) * 15px); */
-
+    box-shadow: 0px 0px 10px #bbb;
+    margin: 16px 0;
 }
 
 .tableCell{
-    border: 1px solid;
+    border: 1px solid #4e4e4e;
     width: 32px;
     height: 32px;
     text-align: center;
@@ -19,18 +30,33 @@ h1 {
 }
 
 .tableCell:hover{
-border-color:red;;
-background: #ccc;
+    border-color:#00999e;
+    background: #ccc;
 }
 
 .selected{
-    border-color: green;
-    background: #4e4e4e;
+    border-color: white;
+    background: #00999e;
     color: white;
 }
 
 .selected:hover{
-    border-color: green;
-    background: #4e4e4e;
+    border-color: white;
+    background: #00999e;
     color: white;
-    }
+}
+.bvalidation {
+    padding: 8px;
+    box-shadow: 0px 0px 10px #bbb;
+    border: 1px solid #00999e;
+    color: #00999e;
+    
+}
+
+.bvalidation:hover{
+    background: #00999e;
+    color: white;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+    
