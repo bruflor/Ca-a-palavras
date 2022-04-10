@@ -16,7 +16,12 @@ const huntedWords = [
   },
 ];
 
+const truePositions = [];
+
 huntedWords.forEach((wordObject) => {
+  const wordPositionObject = {};
+  const wordPosition = [];
+
   const wordLength = wordObject.word.length;
   if (wordObject.direction === "Horizontal") {
     for (let i = 0; i < wordLength; i++) {
@@ -24,7 +29,13 @@ huntedWords.forEach((wordObject) => {
         `L${wordObject.startLineNumber}_C${wordObject.startColumnNumber + i}`
       );
       myCell.innerHTML = wordObject.word[i];
-      console.log(myCell);
+
+      wordPosition.push([
+        wordObject.startLineNumber,
+        wordObject.startColumnNumber + i,
+      ]);
+
+      wordPositionObject[wordObject.word] = wordPosition;
     }
   } else if (wordObject.direction === "Vertical") {
     for (let i = 0; i < wordLength; i++) {
@@ -32,17 +43,32 @@ huntedWords.forEach((wordObject) => {
         `L${wordObject.startLineNumber + i}_C${wordObject.startColumnNumber}`
       );
       myCell.innerHTML = wordObject.word[i];
-      console.log(myCell);
+
+      wordPosition.push([
+        wordObject.startLineNumber,
+        wordObject.startColumnNumber + i,
+      ]);
+
+      wordPositionObject[wordObject.word] = wordPosition;
     }
   } else {
     for (let i = 0; i < wordLength; i++) {
       const myCell = document.getElementById(
-        `L${wordObject.startLineNumber + i}_C${wordObject.startColumnNumber+i}`
+        `L${wordObject.startLineNumber + i}_C${
+          wordObject.startColumnNumber + i
+        }`
       );
       myCell.innerHTML = wordObject.word[i];
-      console.log(myCell);
+
+      wordPosition.push([
+        wordObject.startLineNumber,
+        wordObject.startColumnNumber + i,
+      ]);
+
+      wordPositionObject[wordObject.word] = wordPosition;
     }
   }
+  truePositions.push(wordPositionObject);
 });
-
-
+// console.log(wordPositionObject);
+// console.log(truePositions);
