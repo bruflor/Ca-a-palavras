@@ -28,3 +28,6 @@ processedTable.forEach((line) => {
 
   });
 });
+
+
+//validation through position selected in the table, not for the right word. 

@@ -1,8 +1,7 @@
-const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 const words = ["ban", "grup"];
 
-const table = {
+const table2 = {
   //line:column
   line1: ["x", "B", "C"],
   line2: ["b", "a", "n"],
